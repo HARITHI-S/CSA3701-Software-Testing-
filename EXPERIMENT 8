@@ -1,0 +1,98 @@
+EXPERIMENT 8: CASE STUDY OF BANKING APPLICATION – POSITIVE TEST SCENARIOS AND TEST CASES
+
+## 1. AIM
+
+To write a case study to identify and analyze the requirements of a Banking Application and to prepare positive test scenarios and test cases for the application.
+
+## 2. INTRODUCTION
+
+A Banking Application is an online platform that allows customers to perform banking activities through the internet. Users can log in, check account balances, transfer money, view transaction history, pay bills, and update their account details.
+
+Positive testing is performed to verify whether the banking application works correctly when valid inputs and expected operations are provided.
+
+## 3. REQUIREMENT ANALYSIS
+
+### Functional Requirements
+
+1. User Registration: New customers should be able to register using valid details.
+2. User Login: Customers should be able to log in using valid credentials.
+3. Account Details: Users should be able to view their account information.
+4. Balance Enquiry: Users should be able to check their account balance.
+5. Money Transfer: Users should be able to transfer money to valid beneficiary accounts.
+6. Transaction History: Users should be able to view previous transactions.
+7. Bill Payment: Users should be able to pay bills successfully.
+8. Account Statement: Users should be able to download their account statements.
+9. Profile Update: Users should be able to update their personal information.
+10. Logout: Users should be able to log out securely.
+
+### Non-Functional Requirements
+
+1. The application should provide strong security.
+2. Customer information should be protected.
+3. The application should respond quickly.
+4. The system should support multiple users.
+5. Banking transactions should be accurate.
+6. The application should be available whenever required.
+7. The application should work on different devices and browsers.
+
+## 4. POSITIVE TEST SCENARIOS
+
+Positive testing verifies whether the application works correctly with valid inputs.
+
+| Scenario ID | Test Scenario |
+|---|---|
+| TS01 | Verify customer registration using valid details. |
+| TS02 | Verify login using valid username and password. |
+| TS03 | Verify that account details are displayed correctly. |
+| TS04 | Verify that users can check their account balance. |
+| TS05 | Verify money transfer to a valid beneficiary account. |
+| TS06 | Verify that transaction history is displayed correctly. |
+| TS07 | Verify successful bill payment. |
+| TS08 | Verify that users can download account statements. |
+| TS09 | Verify that customers can update their profile details. |
+| TS10 | Verify that users can log out successfully. |
+
+## 5. POSITIVE TEST CASES
+
+| Test Case ID | Test Steps | Test Data | Expected Result |
+|---|---|---|---|
+| TC01 | Open the banking application and enter valid registration details. Click Register. | Valid name, email and account details | Customer registration should be successful. |
+| TC02 | Enter valid username and password. Click Login. | Registered username and password | User should log in successfully. |
+| TC03 | Open the account details section. | Valid customer account | Account information should be displayed correctly. |
+| TC04 | Select Balance Enquiry. | Valid account number | Current account balance should be displayed. |
+| TC05 | Select Money Transfer, enter a valid beneficiary account and amount, then confirm. | Valid beneficiary and transfer amount | Money should be transferred successfully. |
+| TC06 | Open the transaction history section. | Valid customer account | Previous transactions should be displayed. |
+| TC07 | Select Bill Payment and enter valid bill details. | Valid bill information | Bill payment should be completed successfully. |
+| TC08 | Open the account statement section and click Download. | Valid date range | Account statement should be downloaded successfully. |
+| TC09 | Open the profile section and update personal information. | Valid updated mobile number | Profile details should be updated successfully. |
+| TC10 | Click the Logout button. | Logged-in customer | User should log out successfully. |
+
+## 6. SAMPLE TEST INPUTS
+
+1. Customer Name: Harithi.
+2. Username: Valid registered username.
+3. Password: Valid account password.
+4. Account Number: Valid account number.
+5. Beneficiary Account: Valid beneficiary account number.
+6. Transfer Amount: ₹1000.
+7. Bill Amount: ₹500.
+8. Bill Number: Valid bill number.
+9. Date Range: Valid statement period.
+10. Mobile Number: Valid registered mobile number.
+
+## 7. EXPECTED OUTPUT
+
+1. Customer registration should be successful.
+2. User should log in successfully.
+3. Account details should be displayed correctly.
+4. Account balance should be displayed.
+5. Money transfer should be completed successfully.
+6. Transaction history should be displayed.
+7. Bill payment should be successful.
+8. Account statement should be downloaded.
+9. Profile information should be updated successfully.
+10. User should log out successfully.
+
+## 8. RESULT
+
+Thus, the requirements of the Banking Application were identified and analyzed successfully. Positive test scenarios and test cases were prepared to verify the proper functioning of the application using valid inputs.
