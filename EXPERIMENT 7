@@ -1,0 +1,104 @@
+EXPERIMENT 7: CASE STUDY OF FOOD DELIVERY APPLICATION – NEGATIVE TEST SCENARIOS AND TEST CASES
+
+## 1. AIM
+
+To write a case study to identify and analyze the requirements of a Food Delivery Application and to prepare negative test scenarios and test cases for the application.
+
+## 2. INTRODUCTION
+
+A Food Delivery Application is an online platform that allows customers to order food from restaurants through the internet. Users can register, log in, search for restaurants, view food menus, add food items to the cart, make payments, and track their orders.
+
+Negative testing is performed to verify whether the application handles invalid inputs, incorrect information, and unexpected situations properly.
+
+## 3. REQUIREMENT ANALYSIS
+
+### Functional Requirements
+
+1. User Registration: Users should be able to create an account using valid details.
+2. User Login: The application should verify username and password.
+3. Restaurant Search: Users should be able to search for available restaurants.
+4. Food Menu: Users should be able to view available food items.
+5. Shopping Cart: Users should be able to add and remove food items.
+6. Order Placement: Users should be able to place food orders.
+7. Payment: The application should validate payment details.
+8. Order Tracking: Users should be able to track placed orders.
+9. Order Cancellation: Users should be able to cancel eligible orders.
+10. Logout: Users should be able to log out securely.
+
+### Non-Functional Requirements
+
+1. The application should provide secure access.
+2. The application should handle multiple users.
+3. The application should display proper error messages.
+4. Customer information should be protected.
+5. The application should respond quickly.
+6. Payment transactions should be reliable.
+7. The application should work on different devices.
+
+## 4. NEGATIVE TEST SCENARIOS
+
+Negative testing verifies whether the application handles invalid inputs and incorrect operations properly.
+
+| Scenario ID | Negative Test Scenario |
+|---|---|
+| TS01 | Verify registration with an invalid email address. |
+| TS02 | Verify registration with empty mandatory fields. |
+| TS03 | Verify login with an incorrect username. |
+| TS04 | Verify login with an incorrect password. |
+| TS05 | Verify restaurant search using an invalid location. |
+| TS06 | Verify selection of an unavailable restaurant. |
+| TS07 | Verify adding an unavailable food item to the cart. |
+| TS08 | Verify adding zero or negative food quantity. |
+| TS09 | Verify placing an order without a delivery address. |
+| TS10 | Verify payment using invalid payment details. |
+| TS11 | Verify order tracking using an invalid order ID. |
+| TS12 | Verify cancellation of an already delivered order. |
+
+## 5. NEGATIVE TEST CASES
+
+| Test Case ID | Test Steps | Test Data | Expected Result |
+|---|---|---|---|
+| TC01 | Open registration and enter an invalid email address. Click Register. | harithi@123 | Invalid email message should be displayed. |
+| TC02 | Leave mandatory registration fields empty and click Register. | Empty fields | Required field validation should be displayed. |
+| TC03 | Enter an incorrect username and valid password. Click Login. | Invalid username | Login should be rejected. |
+| TC04 | Enter a valid username and incorrect password. Click Login. | Wrong password | Error message should be displayed. |
+| TC05 | Search restaurants using an invalid location. | Invalid location | No restaurants found message should be displayed. |
+| TC06 | Try to select a restaurant that is unavailable. | Closed restaurant | Restaurant should not accept orders. |
+| TC07 | Try to add an unavailable food item to the cart. | Out-of-stock food item | Food item should not be added to the cart. |
+| TC08 | Enter zero or negative quantity for a food item. | Quantity: -2 | Invalid quantity message should be displayed. |
+| TC09 | Try to place an order without entering a delivery address. | Empty address | Order should not be placed. |
+| TC10 | Enter invalid payment details and submit payment. | Invalid payment information | Payment should be rejected with an error message. |
+| TC11 | Enter an incorrect order ID in the tracking section. | Invalid order ID | Order not found message should be displayed. |
+| TC12 | Try to cancel an already delivered order. | Delivered order | Cancellation should not be allowed. |
+
+## 6. SAMPLE TEST INPUTS
+
+1. Email: harithi@123
+2. Username: Invalid username.
+3. Password: Wrong password.
+4. Location: Invalid location.
+5. Restaurant: Closed restaurant.
+6. Food Item: Unavailable food item.
+7. Quantity: -2
+8. Delivery Address: Empty value.
+9. Payment Details: Invalid payment information.
+10. Order ID: Invalid order ID.
+11. Order Status: Delivered.
+
+## 7. EXPECTED OUTPUT
+
+1. Invalid email addresses should be rejected.
+2. Empty mandatory fields should display validation messages.
+3. Incorrect login credentials should be rejected.
+4. Invalid locations should display an appropriate message.
+5. Closed restaurants should not accept orders.
+6. Unavailable food items should not be added to the cart.
+7. Negative quantities should not be accepted.
+8. Orders should not be placed without a delivery address.
+9. Invalid payment details should be rejected.
+10. Invalid order IDs should display an error message.
+11. Delivered orders should not be cancelled.
+
+## 8. RESULT
+
+Thus, the requirements of the Food Delivery Application were identified and analyzed successfully. Negative test scenarios and test cases were prepared to verify the application's ability to handle invalid inputs, incorrect information, payment failures, and unexpected situations.
