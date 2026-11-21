@@ -1,0 +1,113 @@
+Experiment 25: Calculate Grade of a Student Using JUnit Assertions
+
+# AIM
+To write a Java program to calculate the grade of a student based on marks and validate the output using JUnit assertions.
+
+# ALGORITHM
+1. Start the program.
+2. Read the student's marks.
+3. Check whether the marks are between 0 and 100.
+4. If marks are 90 or above, assign Grade A.
+5. If marks are 80 or above, assign Grade B.
+6. If marks are 70 or above, assign Grade C.
+7. If marks are 60 or above, assign Grade D.
+8. Otherwise, assign Grade F.
+9. Validate the grade using JUnit assertions.
+10. Stop the program.
+
+# CODE
+
+**File 1: StudentGrade.java**
+
+```java
+public class StudentGrade {
+
+    public static String calculateGrade(int marks) {
+
+        if (marks < 0 || marks > 100) {
+            return "Invalid Marks";
+        }
+        else if (marks >= 90) {
+            return "A";
+        }
+        else if (marks >= 80) {
+            return "B";
+        }
+        else if (marks >= 70) {
+            return "C";
+        }
+        else if (marks >= 60) {
+            return "D";
+        }
+        else {
+            return "F";
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int marks = 85;
+
+        String grade = calculateGrade(marks);
+
+        System.out.println("Student Marks: " + marks);
+        System.out.println("Student Grade: " + grade);
+    }
+}
+```
+
+**File 2: StudentGradeTest.java**
+
+```java
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class StudentGradeTest {
+
+    @Test
+    public void testGradeA() {
+        assertEquals("A", StudentGrade.calculateGrade(95));
+    }
+
+    @Test
+    public void testGradeB() {
+        assertEquals("B", StudentGrade.calculateGrade(85));
+    }
+
+    @Test
+    public void testGradeC() {
+        assertEquals("C", StudentGrade.calculateGrade(75));
+    }
+
+    @Test
+    public void testGradeD() {
+        assertEquals("D", StudentGrade.calculateGrade(65));
+    }
+
+    @Test
+    public void testGradeF() {
+        assertEquals("F", StudentGrade.calculateGrade(40));
+    }
+
+    @Test
+    public void testInvalidMarks() {
+        assertEquals("Invalid Marks", StudentGrade.calculateGrade(110));
+    }
+}
+```
+
+# INPUT
+
+```text
+Student Marks: 85
+```
+
+# OUTPUT
+
+```text
+Student Marks: 85
+Student Grade: B
+```
+
+# RESULT
+Thus, the Java program to calculate the grade of a student based on marks was developed successfully, and the output can be validated using JUnit assertions.
