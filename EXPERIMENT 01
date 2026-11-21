@@ -1,0 +1,137 @@
+EXPERIMENT 1: IDENTIFICATION AND ANALYSIS OF SOFTWARE DEFECTS IN AN ATM SYSTEM
+
+ 1. AIM
+
+To select an ATM (Automated Teller Machine) system, thoroughly examine its system specifications, identify different software defects, and document them with suitable test cases.
+
+2. ALGORITHM
+
+1. Start the program.
+2. Select the ATM system for testing.
+3. Enter the ATM PIN and verify the user.
+4. Check the account balance.
+5. Test deposit and withdrawal operations.
+6. Verify invalid PIN, insufficient balance, and incorrect transaction amounts.
+7. Identify and record the software defects.
+8. Display the test results.
+9. Stop the program.
+
+3. SYSTEM SPECIFICATIONS
+
+Hardware Requirements:
+
+- Computer or ATM machine.
+- Keyboard and display.
+- Card reader.
+
+Software Requirements:
+
+- Operating System: Windows.
+- Programming Language: Python.
+- Code Editor: VS Code.
+
+Functional Requirements:
+
+- User authentication using PIN.
+- Balance enquiry.
+- Cash withdrawal.
+- Cash deposit.
+- Transaction validation.
+
+4. CODE
+
+File name: ATM_System.py
+
+
+ ATM System - Software Defect Identificationbalance = 5000correct_pin = "1234"print("===== ATM SYSTEM =====")pin = input("Enter your PIN: ")if pin != correct_pin:    print("Defect: Invalid PIN")else:    print("\n1. Balance Enquiry")    print("2. Withdraw Money")    print("3. Deposit Money")    choice = int(input("Enter your choice: "))    if choice == 1:        print("Account Balance:", balance)    elif choice == 2:        amount = int(input("Enter withdrawal amount: "))        if amount <= 0:            print("Defect: Invalid withdrawal amount")        elif amount > balance:            print("Defect: Insufficient balance")        else:            balance -= amount            print("Withdrawal Successful")            print("Remaining Balance:", balance)    elif choice == 3:        amount = int(input("Enter deposit amount: "))
+
+
+5. TEST CASES AND INPUT
+
+| Test case | Input                   | Expected result        |
+| --------- | ----------------------- | ---------------------- |
+| TC01      | Valid PIN – 1234        | Login successful       |
+| TC02      | Invalid PIN – 1111      | Invalid PIN message    |
+| TC03      | Balance enquiry         | Display balance ₹5000  |
+| TC04      | Withdraw ₹6000          | Insufficient balance   |
+| TC05      | Withdraw ₹1000          | Withdrawal successful  |
+| TC06      | Deposit ₹2000           | Deposit successful     |
+| TC07      | Deposit -500            | Invalid deposit amount |
+| TC08      | Invalid menu choice – 5 | Invalid menu choice    |
+
+6. OUTPUT
+
+Output 1: Balance Enquir
+
+===== ATM SYSTEM =====
+Enter your PIN: 1234
+
+1. Balance Enquiry
+2. Withdraw Money
+3. Deposit Money
+
+Enter your choice: 1
+Account Balance: 5000
+
+===== TESTING COMPLETED =====
+
+
+Output 2: Invalid PIN
+
+
+===== ATM SYSTEM =====
+Enter your PIN: 1111
+Defect: Invalid PIN
+
+
+Output 3: Insufficient Balance
+
+Enter your PIN: 1234
+Enter your choice: 2
+Enter withdrawal amount: 6000
+Defect: Insufficient balance
+
+
+Output 4: Successful Withdrawal
+
+
+Enter your PIN: 1234
+Enter your choice: 2
+Enter withdrawal amount: 1000
+Withdrawal Successful
+Remaining Balance: 4000
+
+
+Output 5: Successful Deposit
+
+
+Enter your PIN: 1234
+Enter your choice: 3
+Enter deposit amount: 2000
+Deposit Successful
+Updated Balance: 7000
+
+
+Output 6: Invalid Deposit
+
+
+Enter your PIN: 1234
+Enter your choice: 3
+Enter deposit amount: -500
+Defect: Invalid deposit amount
+
+
+7. DEFECTS IDENTIFIED
+
+| Defect ID | Defect description                      | Severity |
+| --------- | --------------------------------------- | -------- |
+| D01       | Invalid PIN is entered                  | High     |
+| D02       | Withdrawal exceeds account balance      | High     |
+| D03       | Negative withdrawal amount              | Medium   |
+| D04       | Negative deposit amount                 | Medium   |
+| D05       | Invalid menu selection                  | Low      |
+| D06       | Non-numeric input may crash the program | Medium   |
+
+8. RESULT
+
+Thus, the ATM system was examined and tested successfully. Various software defects related to user authentication, balance validation, deposit, withdrawal, and invalid inputs were identified and documented using suitable test cases.
