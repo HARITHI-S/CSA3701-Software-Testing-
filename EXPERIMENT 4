@@ -1,0 +1,97 @@
+EXPERIMENT 4: CASE STUDY OF E-COMMERCE APPLICATION – POSITIVE TEST SCENARIOS AND TEST CASES
+
+## 1. AIM
+
+To write a case study to identify and analyze the requirements of an E-Commerce Application and to prepare positive test scenarios and test cases for the application.
+
+## 2. INTRODUCTION
+
+An E-Commerce Application is an online shopping platform that allows customers to purchase products through the internet. Users can register, log in, search for products, add products to the shopping cart, make payments, and track their orders.
+
+Positive testing is performed to verify whether the application works correctly when valid inputs and expected operations are provided.
+
+## 3. REQUIREMENT ANALYSIS
+
+### Functional Requirements
+
+1. User Registration: New users should be able to create an account.
+2. User Login: Registered users should be able to log in using valid credentials.
+3. Product Search: Users should be able to search for available products.
+4. Product Details: Users should be able to view product names, prices, and descriptions.
+5. Add to Cart: Users should be able to add products to the shopping cart.
+6. Place Order: Users should be able to place orders successfully.
+7. Payment: Users should be able to complete payments using valid payment details.
+8. Order Tracking: Users should be able to track their orders.
+9. Logout: Users should be able to log out successfully.
+
+### Non-Functional Requirements
+
+1. The application should be user-friendly.
+2. The website should load quickly.
+3. Customer information should be secure.
+4. The application should support multiple users.
+5. The payment process should be reliable.
+6. The application should work on different browsers and devices.
+
+## 4. POSITIVE TEST SCENARIOS
+
+Positive testing verifies whether the application works correctly with valid inputs.
+
+| Scenario ID | Test Scenario |
+|---|---|
+| TS01 | Verify user registration with valid details. |
+| TS02 | Verify login using valid username and password. |
+| TS03 | Verify product search using a valid product name. |
+| TS04 | Verify that product details are displayed correctly. |
+| TS05 | Verify that a product can be added to the shopping cart. |
+| TS06 | Verify that the shopping cart displays selected products. |
+| TS07 | Verify that the user can place an order successfully. |
+| TS08 | Verify payment using valid payment details. |
+| TS09 | Verify that the order confirmation is displayed. |
+| TS10 | Verify that users can track their orders. |
+| TS11 | Verify that users can log out successfully. |
+
+## 5. POSITIVE TEST CASES
+
+| Test Case ID | Test Steps | Test Data | Expected Result |
+|---|---|---|---|
+| TC01 | Open the website and enter valid registration details. Click Register. | Valid name, email and password | Account should be created successfully. |
+| TC02 | Enter valid username and password. Click Login. | Registered email and password | User should log in successfully. |
+| TC03 | Enter a valid product name in the search bar. | Mobile Phone | Related products should be displayed. |
+| TC04 | Select a product from the search results. | Available product | Product name, price and description should be displayed. |
+| TC05 | Click the Add to Cart button. | Selected product | Product should be added to the cart. |
+| TC06 | Open the shopping cart. | Selected products | Cart should display the correct products and prices. |
+| TC07 | Enter a valid delivery address and click Place Order. | Valid delivery address | Order should be placed successfully. |
+| TC08 | Select a payment method and enter valid payment details. | Valid payment information | Payment should be completed successfully. |
+| TC09 | Complete the order process. | Valid order | Order confirmation and order ID should be displayed. |
+| TC10 | Open the order tracking section. | Valid order ID | Current order status should be displayed. |
+| TC11 | Click the Logout button. | Logged-in user | User should log out successfully. |
+
+## 6. SAMPLE TEST INPUTS
+
+1. Customer Name: Harithi.
+2. Email: harithi@example.com.
+3. Password: Harithi@123.
+4. Product Name: Mobile Phone.
+5. Quantity: 1.
+6. Delivery Address: Chennai.
+7. Payment Method: Valid payment method.
+8. Order ID: Valid generated order ID.
+
+## 7. EXPECTED OUTPUT
+
+1. User registration should be successful.
+2. User should log in successfully.
+3. Relevant products should be displayed.
+4. Product details should be displayed correctly.
+5. Products should be added to the shopping cart.
+6. Cart should display the correct product details and total amount.
+7. Orders should be placed successfully.
+8. Payment should be completed successfully.
+9. Order confirmation should be generated.
+10. Order tracking details should be displayed.
+11. User should log out successfully.
+
+## 8. RESULT
+
+Thus, the requirements of the E-Commerce Application were identified and analyzed successfully. Positive test scenarios and test cases were prepared to verify the proper functioning of the application using valid inputs.
