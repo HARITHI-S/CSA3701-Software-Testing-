@@ -1,0 +1,110 @@
+EXPERIMENT 16: ANAGRAM CHECKING USING JUNIT ASSERTIONS
+
+## 1. AIM
+
+To write a Java program to check whether two strings are anagrams of each other and validate the output using JUnit assertions.
+
+## 2. ALGORITHM
+
+1. Start the program.
+2. Read two strings.
+3. Convert both strings into lowercase.
+4. Remove spaces from both strings.
+5. Convert both strings into character arrays.
+6. Sort both character arrays.
+7. Compare the sorted arrays.
+8. If both arrays are equal, the strings are anagrams; otherwise, they are not anagrams.
+9. Validate the result using JUnit assertions.
+10. Display the output and stop the program.
+
+## 3. CODE
+
+### File 1: Anagram.java
+
+```java
+import java.util.Arrays;
+
+public class Anagram {
+
+    public static boolean checkAnagram(String str1, String str2) {
+
+        str1 = str1.toLowerCase().replaceAll("\\s", "");
+        str2 = str2.toLowerCase().replaceAll("\\s", "");
+
+        char[] a = str1.toCharArray();
+        char[] b = str2.toCharArray();
+
+        Arrays.sort(a);
+        Arrays.sort(b);
+
+        return Arrays.equals(a, b);
+    }
+
+    public static void main(String[] args) {
+
+        String str1 = "listen";
+        String str2 = "silent";
+
+        if (checkAnagram(str1, str2)) {
+            System.out.println("The strings are Anagrams");
+        } else {
+            System.out.println("The strings are not Anagrams");
+        }
+    }
+}
+```
+
+### File 2: AnagramTest.java
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class AnagramTest {
+
+    @Test
+    public void testAnagram() {
+        assertTrue(Anagram.checkAnagram("listen", "silent"));
+    }
+
+    @Test
+    public void testNotAnagram() {
+        assertFalse(Anagram.checkAnagram("hello", "world"));
+    }
+
+    @Test
+    public void testDifferentCase() {
+        assertTrue(Anagram.checkAnagram("Listen", "Silent"));
+    }
+
+    @Test
+    public void testWithSpaces() {
+        assertTrue(Anagram.checkAnagram("Dormitory", "Dirty room"));
+    }
+}
+```
+
+## 4. INPUT
+
+```text
+First String  = listen
+Second String = silent
+```
+
+## 5. OUTPUT
+
+```text
+The strings are Anagrams
+```
+
+### Expected JUnit Test Results
+
+```text
+Tests Run: 4
+Tests Successful: 4
+Tests Failed: 0
+```
+
+## 6. RESULT
+
+Thus, the Java program to check whether two strings are anagrams was developed successfully. The output was validated using JUnit assertions for anagram and non-anagram strings.
