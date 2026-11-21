@@ -1,16 +1,16 @@
 EXPERIMENT 10: TEST PLAN DOCUMENT FOR LIBRARY MANAGEMENT SYSTEM
 
-## 1. AIM
+ 1. AIM
 
 To develop a comprehensive test plan document for a Library Management System by identifying testing strategies, methodologies, and acceptance criteria to ensure the proper functionality and reliability of the system.
 
-## 2. INTRODUCTION
+ 2. INTRODUCTION
 
 A Library Management System is a software application used to manage library activities such as adding books, searching books, issuing books, returning books, managing students, and calculating overdue fines.
 
 The purpose of testing is to identify software defects and verify that all system functions work correctly according to the requirements.
 
-## 3. OBJECTIVES OF TESTING
+3. OBJECTIVES OF TESTING
 
 1. To verify all library management functions.
 2. To identify and fix software defects.
@@ -20,7 +20,7 @@ The purpose of testing is to identify software defects and verify that all syste
 6. To ensure data accuracy and security.
 7. To check system performance and reliability.
 
-## 4. SCOPE OF TESTING
+4. SCOPE OF TESTING
 
 The following modules are included in testing:
 
@@ -34,9 +34,9 @@ The following modules are included in testing:
 8. Report Generation Module
 9. Logout Module
 
-## 5. TESTING STRATEGIES
+ 5. TESTING STRATEGIES
 
-### 5.1 Unit Testing
+5.1 Unit Testing
 
 Each individual module is tested separately to verify its functionality.
 
@@ -45,7 +45,7 @@ Example:
 - Test the book search function.
 - Test the fine calculation function.
 
-### 5.2 Integration Testing
+5.2 Integration Testing
 
 Multiple modules are combined and tested to verify their interaction.
 
@@ -53,28 +53,28 @@ Example:
 - Verify book issue and return operations.
 - Verify student details with book issue records.
 
-### 5.3 System Testing
+ 5.3 System Testing
 
 The complete Library Management System is tested to verify that all modules work together correctly.
 
 Example:
 - Test the complete process of login, book search, book issue, and book return.
 
-### 5.4 Acceptance Testing
+5.4 Acceptance Testing
 
 The system is tested to verify whether it meets the user's requirements.
 
 Example:
 - Verify whether librarians can successfully manage books and student records.
 
-### 5.5 Regression Testing
+5.5 Regression Testing
 
 Previously tested functions are tested again after modifications to ensure that existing features work correctly.
 
 Example:
 - Check whether book search still works after updating book details.
 
-## 6. TESTING METHODOLOGIES
+ 6. TESTING METHODOLOGIES
 
 1. Black Box Testing: Testing the system functionality without knowing the internal code.
 2. White Box Testing: Testing the internal program logic and code structure.
@@ -83,16 +83,16 @@ Example:
 5. Manual Testing: Executing test cases manually to identify defects.
 6. Automation Testing: Using testing tools to execute test cases automatically.
 
-## 7. TEST ENVIRONMENT
+ 7. TEST ENVIRONMENT
 
-### Hardware Requirements
+ Hardware Requirements
 
 - Computer or Laptop.
 - Minimum 4 GB RAM.
 - Keyboard and Mouse.
 - Internet Connection (if required).
 
-### Software Requirements
+Software Requirements
 
 - Operating System: Windows.
 - Frontend: HTML, CSS and JavaScript.
@@ -101,7 +101,7 @@ Example:
 - Browser: Google Chrome.
 - Testing Tool: Selenium.
 
-## 8. TEST SCENARIOS
+8. TEST SCENARIOS
 
 | Test Scenario ID | Test Scenario |
 |---|---|
@@ -117,7 +117,7 @@ Example:
 | TS10 | Verify report generation. |
 | TS11 | Verify logout functionality. |
 
-## 9. SAMPLE TEST CASES
+9. SAMPLE TEST CASES
 
 | Test Case ID | Test Description | Test Input | Expected Result |
 |---|---|---|---|
@@ -133,18 +133,18 @@ Example:
 | TC10 | Generate report | Valid report request | Report generated successfully |
 | TC11 | Logout | Click Logout | User logged out successfully |
 
-## 10. DEFECT MANAGEMENT
+ 10. DEFECT MANAGEMENT
 
 Defects are identified and recorded during testing.
 
-### Defect Severity
+ Defect Severity
 
 1. Critical: System crashes or important functions fail.
 2. High: Major functions do not work correctly.
 3. Medium: Some functions work incorrectly.
 4. Low: Minor user interface or display issues.
 
-### Defect Life Cycle
+Defect Life Cycle
 
 1. New
 2. Assigned
@@ -154,16 +154,16 @@ Defects are identified and recorded during testing.
 6. Verified
 7. Closed
 
-## 11. ENTRY AND EXIT CRITERIA
+ 11. ENTRY AND EXIT CRITERIA
 
-### Entry Criteria
+Entry Criteria
 
 1. Requirements should be available.
 2. Test cases should be prepared.
 3. Test environment should be ready.
 4. Application should be available for testing.
 
-### Exit Criteria
+Exit Criteria
 
 1. All planned test cases should be executed.
 2. Critical and high-severity defects should be resolved.
@@ -171,7 +171,7 @@ Defects are identified and recorded during testing.
 4. Test results should be documented.
 5. The system should meet the acceptance criteria.
 
-## 12. ACCEPTANCE CRITERIA
+12. ACCEPTANCE CRITERIA
 
 The Library Management System is accepted when:
 
@@ -183,7 +183,7 @@ The Library Management System is accepted when:
 6. Reports are generated correctly.
 7. No critical defects remain unresolved.
 
-## 13. TEST DELIVERABLES
+13. TEST DELIVERABLES
 
 1. Test Plan Document.
 2. Test Scenarios.
@@ -193,6 +193,6 @@ The Library Management System is accepted when:
 6. Test Execution Reports.
 7. Final Test Summary Report.
 
-## 14. RESULT
+14. RESULT
 
 Thus, a comprehensive test plan document for the Library Management System was prepared successfully. Various testing strategies, methodologies, test scenarios, test cases, and acceptance criteria were identified to ensure the proper functionality, reliability, and quality of the application.
