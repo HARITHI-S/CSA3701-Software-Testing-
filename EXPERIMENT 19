@@ -1,0 +1,108 @@
+EXPERIMENT 19: COMPOUND INTEREST USING JUNIT ASSERTIONS
+
+## 1. AIM
+
+To write a Java program to calculate Compound Interest and validate the output using JUnit assertions.
+
+## 2. ALGORITHM
+
+1. Start the program.
+2. Read the principal amount, annual interest rate, and time period.
+3. Calculate the total amount using the compound interest formula.
+4. Subtract the principal amount from the total amount.
+5. The result is the compound interest.
+6. Use JUnit assertions to validate the calculated result.
+7. Display the compound interest and stop the program.
+
+## 3. CODE
+
+### File 1: CompoundInterest.java
+
+```java
+public class CompoundInterest {
+
+    public static double calculateCI(double principal,
+                                     double rate, double time) {
+
+        double amount = principal *
+                Math.pow((1 + rate / 100), time);
+
+        return amount - principal;
+    }
+
+    public static void main(String[] args) {
+
+        double principal = 10000;
+        double rate = 10;
+        double time = 2;
+
+        double ci = calculateCI(principal, rate, time);
+
+        System.out.println("Compound Interest: " + ci);
+    }
+}
+```
+
+### File 2: CompoundInterestTest.java
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class CompoundInterestTest {
+
+    @Test
+    public void testCompoundInterest() {
+        assertEquals(2100.0,
+                CompoundInterest.calculateCI(10000, 10, 2),
+                0.01);
+    }
+
+    @Test
+    public void testOneYearInterest() {
+        assertEquals(500.0,
+                CompoundInterest.calculateCI(5000, 10, 1),
+                0.01);
+    }
+
+    @Test
+    public void testZeroInterestRate() {
+        assertEquals(0.0,
+                CompoundInterest.calculateCI(10000, 0, 2),
+                0.01);
+    }
+
+    @Test
+    public void testZeroTime() {
+        assertEquals(0.0,
+                CompoundInterest.calculateCI(10000, 10, 0),
+                0.01);
+    }
+}
+```
+
+## 4. INPUT
+
+```text
+Principal Amount = 10000
+Rate of Interest = 10%
+Time = 2 Years
+```
+
+## 5. OUTPUT
+
+```text
+Compound Interest: 2100.0
+```
+
+### Expected JUnit Test Results
+
+```text
+Tests Run: 4
+Tests Successful: 4
+Tests Failed: 0
+```
+
+## 6. RESULT
+
+Thus, the Java program to calculate Compound Interest was developed successfully. The output was validated using JUnit assertions for different principal amounts, interest rates, and time periods.
