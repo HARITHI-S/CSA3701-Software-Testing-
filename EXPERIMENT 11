@@ -1,18 +1,18 @@
-# EXPERIMENT 11: RAILWAY RESERVATION SYSTEM – POSITIVE TESTING
+EXPERIMENT 11: RAILWAY RESERVATION SYSTEM – POSITIVE TESTING
 
-## 1. AIM
+1. AIM
 
 To identify and analyze the requirements of a Railway Reservation System and prepare positive test scenarios and test cases to verify that the application works correctly with valid inputs.
 
-## 2. INTRODUCTION
+2. INTRODUCTION
 
 A Railway Reservation System is a software application used by passengers to search for trains, check seat availability, book tickets, make payments, and view booking details.
 
 The purpose of testing is to verify that all the functions of the Railway Reservation System work correctly according to the user requirements.
 
-## 3. REQUIREMENT ANALYSIS
+ 3. REQUIREMENT ANALYSIS
 
-### Functional Requirements
+Functional Requirements
 
 1. **User Registration:** New users should be able to create an account using valid details.
 2. **User Login:** Registered users should be able to log in using valid credentials.
@@ -27,7 +27,7 @@ The purpose of testing is to verify that all the functions of the Railway Reserv
 11. **Booking History:** Users should be able to view their previous and current bookings.
 12. **Logout:** Users should be able to log out securely.
 
-### Non-Functional Requirements
+ Non-Functional Requirements
 
 1. **Performance:** The system should respond quickly to user requests.
 2. **Security:** Passenger and payment information should be protected.
@@ -35,7 +35,7 @@ The purpose of testing is to verify that all the functions of the Railway Reserv
 4. **Usability:** The application should be easy to use.
 5. **Availability:** The system should be available whenever passengers need to make reservations.
 
-## 4. OBJECTIVES OF TESTING
+ 4. OBJECTIVES OF TESTING
 
 1. To verify user registration and login.
 2. To test train searching functionality.
@@ -46,7 +46,7 @@ The purpose of testing is to verify that all the functions of the Railway Reserv
 7. To verify ticket confirmation and PNR generation.
 8. To check booking history and logout functionality.
 
-## 5. SCOPE OF TESTING
+5. SCOPE OF TESTING
 
 The following modules are included:
 
@@ -63,7 +63,7 @@ The following modules are included:
 11. Ticket Cancellation Module
 12. Logout Module
 
-## 6. POSITIVE TEST SCENARIOS
+ 6. POSITIVE TEST SCENARIOS
 
 | Test Scenario ID | Test Scenario |
 |---|---|
@@ -80,7 +80,7 @@ The following modules are included:
 | TS11 | Verify cancellation of an eligible booked ticket. |
 | TS12 | Verify successful logout. |
 
-## 7. POSITIVE TEST CASES
+7. POSITIVE TEST CASES
 
 | Test Case ID | Test Description | Test Input | Expected Result |
 |---|---|---|---|
@@ -97,7 +97,7 @@ The following modules are included:
 | TC11 | Cancel a booked ticket | Valid eligible booking ID or PNR | Ticket cancelled successfully |
 | TC12 | Logout from the application | Click Logout | User logged out successfully |
 
-## 8. SAMPLE TEST DATA
+8. SAMPLE TEST DATA
 
 | Field | Sample Input |
 |---|---|
@@ -113,7 +113,7 @@ The following modules are included:
 
 *Note: The sample data is for academic testing only. Use a test environment and dummy payment details.*
 
-## 9. EXPECTED OUTPUT
+ 9. EXPECTED OUTPUT
 
 1. User registration should be completed successfully.
 2. The user should log in with valid credentials.
@@ -127,6 +127,6 @@ The following modules are included:
 10. Eligible tickets should be cancelled successfully.
 11. The user should be logged out successfully.
 
-## 10. RESULT
+10. RESULT
 
 Thus, the requirements of the Railway Reservation System were identified and analyzed successfully. Positive test scenarios and test cases were prepared to verify the major functions of the application using valid inputs.
