@@ -1,0 +1,95 @@
+EXPERIMENT 5: CASE STUDY OF E-COMMERCE APPLICATION – NEGATIVE TEST SCENARIOS AND TEST CASES
+
+## 1. AIM
+
+To write a case study to identify and analyze the requirements of an E-Commerce Application and to prepare negative test scenarios and test cases for the application.
+
+## 2. INTRODUCTION
+
+An E-Commerce Application is an online shopping platform that allows customers to purchase products through the internet. Users can register, log in, search for products, add items to the shopping cart, make payments, and track their orders.
+
+Negative testing is performed to verify whether the application handles invalid inputs, incorrect data, and unexpected situations properly.
+
+## 3. REQUIREMENT ANALYSIS
+
+### Functional Requirements
+
+1. User Registration: Users should be able to create an account using valid details.
+2. User Login: The application should verify login credentials.
+3. Product Search: Users should be able to search for available products.
+4. Shopping Cart: Users should be able to add and remove products.
+5. Order Placement: Users should be able to place orders.
+6. Payment: The application should validate payment details.
+7. Order Tracking: Users should be able to track placed orders.
+8. Logout: Users should be able to log out securely.
+
+### Non-Functional Requirements
+
+1. The application should provide secure access.
+2. The website should handle multiple users.
+3. The application should display proper error messages.
+4. Customer information should be protected.
+5. The application should respond quickly.
+6. The payment process should be reliable.
+
+## 4. NEGATIVE TEST SCENARIOS
+
+Negative testing verifies whether the application handles invalid inputs and incorrect operations properly.
+
+| Scenario ID | Negative Test Scenario |
+|---|---|
+| TS01 | Verify registration with an invalid email address. |
+| TS02 | Verify registration with empty mandatory fields. |
+| TS03 | Verify login with an incorrect username. |
+| TS04 | Verify login with an incorrect password. |
+| TS05 | Verify product search with an unavailable product name. |
+| TS06 | Verify adding an out-of-stock product to the cart. |
+| TS07 | Verify adding zero or negative product quantity. |
+| TS08 | Verify order placement without a delivery address. |
+| TS09 | Verify payment using invalid payment details. |
+| TS10 | Verify order tracking using an invalid order ID. |
+| TS11 | Verify access to the shopping cart without proper authorization. |
+
+## 5. NEGATIVE TEST CASES
+
+| Test Case ID | Test Steps | Test Data | Expected Result |
+|---|---|---|---|
+| TC01 | Open registration page and enter an invalid email. Click Register. | harithi@123 | Invalid email message should be displayed. |
+| TC02 | Leave mandatory registration fields empty and click Register. | Empty fields | Required field validation should be displayed. |
+| TC03 | Enter an incorrect username and valid password. Click Login. | Invalid username | Login should be rejected. |
+| TC04 | Enter a valid username and incorrect password. Click Login. | Wrong password | Error message should be displayed. |
+| TC05 | Search for a product that is not available. | Unknown product | No products found message should be displayed. |
+| TC06 | Try to add an out-of-stock product to the cart. | Out-of-stock product | Product should not be added to the cart. |
+| TC07 | Enter zero or negative quantity for a product. | Quantity: -2 | Invalid quantity message should be displayed. |
+| TC08 | Try to place an order without entering a delivery address. | Empty address | Order should not be placed. |
+| TC09 | Enter invalid payment details and submit payment. | Invalid payment details | Payment should be rejected with an error message. |
+| TC10 | Enter an incorrect order ID in the tracking section. | Invalid order ID | Order not found message should be displayed. |
+| TC11 | Try to access the shopping cart without logging in. | Unauthenticated user | Access should be denied or login should be requested. |
+
+## 6. SAMPLE TEST INPUTS
+
+1. Email: harithi@123
+2. Username: Invalid username.
+3. Password: Wrong password.
+4. Product Name: Unknown product.
+5. Product Quantity: -2
+6. Delivery Address: Empty value.
+7. Payment Details: Invalid payment information.
+8. Order ID: Invalid order ID.
+
+## 7. EXPECTED OUTPUT
+
+1. Invalid email addresses should be rejected.
+2. Empty mandatory fields should display validation messages.
+3. Incorrect login credentials should be rejected.
+4. Unavailable products should display an appropriate message.
+5. Out-of-stock products should not be added to the cart.
+6. Negative quantities should not be accepted.
+7. Orders should not be placed without a delivery address.
+8. Invalid payment details should be rejected.
+9. Invalid order IDs should display an error message.
+10. Unauthorized users should not access protected shopping cart information.
+
+## 8. RESULT
+
+Thus, the requirements of the E-Commerce Application were identified and analyzed successfully. Negative test scenarios and test cases were prepared to verify the application's ability to handle invalid inputs, incorrect information, payment failures, and unauthorized access.
