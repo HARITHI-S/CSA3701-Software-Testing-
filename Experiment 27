@@ -1,0 +1,94 @@
+Experiment 27: Calculate the Average of N Numbers Using Functions and JUnit Assertions
+
+# AIM
+To write a Java program to calculate the average of N numbers using functions and validate the output using JUnit assertions.
+
+# ALGORITHM
+1. Start the program.
+2. Declare an array to store N numbers.
+3. Read the numbers from the array.
+4. Call a function to calculate the average.
+5. Initialize the sum as zero.
+6. Add all the array elements.
+7. Divide the sum by the total number of elements.
+8. Return the average.
+9. Validate the output using JUnit assertions.
+10. Stop the program.
+
+# CODE
+
+**File 1: AverageNumbers.java**
+
+```java
+public class AverageNumbers {
+
+    public static double calculateAverage(int[] numbers) {
+
+        int sum = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            sum = sum + numbers[i];
+        }
+
+        return (double) sum / numbers.length;
+    }
+
+    public static void main(String[] args) {
+
+        int[] numbers = {10, 20, 30, 40, 50};
+
+        double average = calculateAverage(numbers);
+
+        System.out.println("Average: " + average);
+    }
+}
+```
+
+**File 2: AverageNumbersTest.java**
+
+```java
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class AverageNumbersTest {
+
+    @Test
+    public void testNormalAverage() {
+        int[] numbers = {10, 20, 30, 40, 50};
+        assertEquals(30.0, AverageNumbers.calculateAverage(numbers), 0.001);
+    }
+
+    @Test
+    public void testSingleNumber() {
+        int[] numbers = {25};
+        assertEquals(25.0, AverageNumbers.calculateAverage(numbers), 0.001);
+    }
+
+    @Test
+    public void testDecimalAverage() {
+        int[] numbers = {10, 20, 25};
+        assertEquals(18.333, AverageNumbers.calculateAverage(numbers), 0.001);
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        int[] numbers = {-10, -20, -30};
+        assertEquals(-20.0, AverageNumbers.calculateAverage(numbers), 0.001);
+    }
+}
+```
+
+# INPUT
+
+```text
+Numbers: 10, 20, 30, 40, 50
+```
+
+# OUTPUT
+
+```text
+Average: 30.0
+```
+
+# RESULT
+Thus, the Java program to calculate the average of N numbers using functions was developed, and the output can be validated using JUnit assertions.
