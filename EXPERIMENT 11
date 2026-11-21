@@ -1,0 +1,132 @@
+# EXPERIMENT 11: RAILWAY RESERVATION SYSTEM – POSITIVE TESTING
+
+## 1. AIM
+
+To identify and analyze the requirements of a Railway Reservation System and prepare positive test scenarios and test cases to verify that the application works correctly with valid inputs.
+
+## 2. INTRODUCTION
+
+A Railway Reservation System is a software application used by passengers to search for trains, check seat availability, book tickets, make payments, and view booking details.
+
+The purpose of testing is to verify that all the functions of the Railway Reservation System work correctly according to the user requirements.
+
+## 3. REQUIREMENT ANALYSIS
+
+### Functional Requirements
+
+1. **User Registration:** New users should be able to create an account using valid details.
+2. **User Login:** Registered users should be able to log in using valid credentials.
+3. **Train Search:** Passengers should be able to search for trains by entering the source, destination, and journey date.
+4. **Train Details:** The system should display train number, train name, departure time, and arrival time.
+5. **Seat Availability:** Passengers should be able to check available seats in different classes.
+6. **Passenger Details:** The system should accept valid passenger information.
+7. **Ticket Booking:** Users should be able to book tickets when seats are available.
+8. **Payment:** The system should process valid payment details.
+9. **Ticket Confirmation:** The system should generate a booking ID or PNR number after successful booking.
+10. **Ticket Cancellation:** Users should be able to cancel an eligible booked ticket.
+11. **Booking History:** Users should be able to view their previous and current bookings.
+12. **Logout:** Users should be able to log out securely.
+
+### Non-Functional Requirements
+
+1. **Performance:** The system should respond quickly to user requests.
+2. **Security:** Passenger and payment information should be protected.
+3. **Reliability:** The system should process bookings accurately.
+4. **Usability:** The application should be easy to use.
+5. **Availability:** The system should be available whenever passengers need to make reservations.
+
+## 4. OBJECTIVES OF TESTING
+
+1. To verify user registration and login.
+2. To test train searching functionality.
+3. To verify seat availability.
+4. To test passenger information entry.
+5. To verify successful ticket booking.
+6. To test payment processing.
+7. To verify ticket confirmation and PNR generation.
+8. To check booking history and logout functionality.
+
+## 5. SCOPE OF TESTING
+
+The following modules are included:
+
+1. User Registration Module
+2. Login Module
+3. Train Search Module
+4. Train Details Module
+5. Seat Availability Module
+6. Passenger Details Module
+7. Ticket Booking Module
+8. Payment Module
+9. Ticket Confirmation Module
+10. Booking History Module
+11. Ticket Cancellation Module
+12. Logout Module
+
+## 6. POSITIVE TEST SCENARIOS
+
+| Test Scenario ID | Test Scenario |
+|---|---|
+| TS01 | Verify user registration using valid details. |
+| TS02 | Verify login using valid username and password. |
+| TS03 | Verify train search using valid source, destination, and journey date. |
+| TS04 | Verify display of train details. |
+| TS05 | Verify checking seat availability. |
+| TS06 | Verify entering valid passenger details. |
+| TS07 | Verify booking a ticket when seats are available. |
+| TS08 | Verify payment using valid payment details. |
+| TS09 | Verify generation of booking ID or PNR after successful payment. |
+| TS10 | Verify viewing booking history. |
+| TS11 | Verify cancellation of an eligible booked ticket. |
+| TS12 | Verify successful logout. |
+
+## 7. POSITIVE TEST CASES
+
+| Test Case ID | Test Description | Test Input | Expected Result |
+|---|---|---|---|
+| TC01 | Register a new user | Valid name, email, and mobile number | User registered successfully |
+| TC02 | Login to the application | Valid username and password | Login successful |
+| TC03 | Search for trains | Source: Chennai, Destination: Bengaluru, valid future date | Available trains displayed |
+| TC04 | View train details | Select a displayed train | Train number, name, and timings displayed |
+| TC05 | Check seat availability | Select train and travel class | Available seats displayed |
+| TC06 | Enter passenger details | Valid passenger name, age, and gender | Passenger details accepted |
+| TC07 | Book a train ticket | Valid passenger details and available seat | Ticket booking initiated successfully |
+| TC08 | Make payment | Valid payment details | Payment completed successfully |
+| TC09 | Confirm ticket booking | Successful payment | Ticket confirmed and PNR generated |
+| TC10 | View booking history | Logged-in user account | Previous and current bookings displayed |
+| TC11 | Cancel a booked ticket | Valid eligible booking ID or PNR | Ticket cancelled successfully |
+| TC12 | Logout from the application | Click Logout | User logged out successfully |
+
+## 8. SAMPLE TEST DATA
+
+| Field | Sample Input |
+|---|---|
+| Passenger Name | Harithi |
+| Source | Chennai |
+| Destination | Bengaluru |
+| Journey Date | Valid future date |
+| Train Class | Sleeper |
+| Passenger Age | 20 |
+| Gender | Female |
+| Payment Method | UPI |
+| Booking ID | System-generated |
+
+*Note: The sample data is for academic testing only. Use a test environment and dummy payment details.*
+
+## 9. EXPECTED OUTPUT
+
+1. User registration should be completed successfully.
+2. The user should log in with valid credentials.
+3. Available trains should be displayed for the selected journey.
+4. Train details and seat availability should be shown correctly.
+5. Valid passenger details should be accepted.
+6. Ticket booking should be processed successfully.
+7. Valid payment should be completed.
+8. A confirmed ticket with a unique PNR should be generated.
+9. Booking history should display the correct information.
+10. Eligible tickets should be cancelled successfully.
+11. The user should be logged out successfully.
+
+## 10. RESULT
+
+Thus, the requirements of the Railway Reservation System were identified and analyzed successfully. Positive test scenarios and test cases were prepared to verify the major functions of the application using valid inputs.
