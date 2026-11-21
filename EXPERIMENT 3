@@ -1,0 +1,89 @@
+EXPERIMENT 3: CASE STUDY OF ARMS PORTAL – NEGATIVE TEST SCENARIOS AND TEST CASES
+
+## 1. AIM
+
+To write a case study to identify and analyze the requirements of the ARMS Portal and to prepare negative test scenarios and test cases for the application.
+
+## 2. INTRODUCTION
+
+ARMS Portal is an online application used to manage student-related academic information. Students can log in, view their profiles, check attendance, access examination results, view course details, and check fee payment information.
+
+Negative testing is performed to verify whether the application handles invalid inputs and unexpected conditions correctly.
+
+## 3. REQUIREMENT ANALYSIS
+
+### Functional Requirements
+
+1. User Login: The portal should verify the username and password.
+2. Student Profile: The portal should display valid student information.
+3. Attendance: Students should be able to view attendance details.
+4. Academic Results: Students should be able to access examination results.
+5. Course Details: Students should be able to view registered courses.
+6. Fee Details: Students should be able to view payment information.
+7. Logout: Users should be able to log out securely.
+
+### Non-Functional Requirements
+
+1. The portal should provide secure access.
+2. The application should handle invalid inputs.
+3. The portal should respond properly to errors.
+4. The application should protect student information.
+5. The portal should prevent unauthorized access.
+
+## 4. NEGATIVE TEST SCENARIOS
+
+Negative testing verifies whether the application handles invalid inputs and incorrect operations properly.
+
+| Scenario ID | Negative Test Scenario |
+|---|---|
+| TS01 | Verify login with an incorrect username. |
+| TS02 | Verify login with an incorrect password. |
+| TS03 | Verify login with empty username and password. |
+| TS04 | Verify access to the dashboard without login. |
+| TS05 | Verify access to another student's profile. |
+| TS06 | Verify attendance access with an invalid student ID. |
+| TS07 | Verify access to unavailable examination results. |
+| TS08 | Verify course details with an invalid course ID. |
+| TS09 | Verify fee details with invalid payment information. |
+| TS10 | Verify that the session expires after inactivity. |
+
+## 5. NEGATIVE TEST CASES
+
+| Test Case ID | Test Steps | Test Data | Expected Result |
+|---|---|---|---|
+| TC01 | Enter an incorrect username and valid password. Click Login. | Invalid username | Error message should be displayed. |
+| TC02 | Enter a valid username and incorrect password. Click Login. | Invalid password | Login should be rejected. |
+| TC03 | Leave username and password empty and click Login. | Blank fields | Validation message should be displayed. |
+| TC04 | Open the dashboard without logging in. | Unauthorized access | Access should be denied. |
+| TC05 | Try to access another student's profile. | Different student ID | Unauthorized access should be prevented. |
+| TC06 | Enter an invalid student ID in the attendance section. | Invalid student ID | Invalid student details message should be displayed. |
+| TC07 | Try to access results that are not published. | Unavailable results | Results should not be displayed. |
+| TC08 | Enter an invalid course ID. | Invalid course ID | Appropriate error message should be displayed. |
+| TC09 | Enter incorrect payment information. | Invalid payment details | Payment should be rejected. |
+| TC10 | Leave the portal inactive until the session expires. | Expired session | User should be redirected to the login page. |
+
+## 6. SAMPLE TEST INPUTS
+
+1. Username: Incorrect username.
+2. Password: Incorrect password.
+3. Login fields: Empty values.
+4. Student ID: Invalid student ID.
+5. Course ID: Invalid course ID.
+6. Payment information: Incorrect details.
+7. Session: Expired session.
+
+## 7. EXPECTED OUTPUT
+
+1. Invalid login details should be rejected.
+2. Empty fields should display validation messages.
+3. Unauthorized users should not access the dashboard.
+4. Students should not access other students' profiles.
+5. Invalid student IDs should display an error message.
+6. Unpublished results should not be accessible.
+7. Invalid course details should be rejected.
+8. Incorrect payment information should not be accepted.
+9. Expired sessions should redirect users to the login page.
+
+## 8. RESULT
+
+Thus, the requirements of the ARMS Portal were identified and analyzed successfully. Negative test scenarios and test cases were prepared to verify how the application handles invalid inputs, unauthorized access, incorrect information, and unexpected conditions.
