@@ -1,0 +1,83 @@
+EXPERIMENT 2: CASE STUDY OF ARMS PORTAL – POSITIVE TEST SCENARIOS AND TEST CASES
+
+## 1. AIM
+
+To write a case study to identify and analyze the requirements of the ARMS Portal and to prepare positive test scenarios and test cases for the application.
+
+## 2. INTRODUCTION
+
+ARMS Portal is an online application used to manage and access student-related academic information. It allows students to log in, view their profiles, check attendance, access academic results, and perform other academic activities.
+
+The purpose of testing is to verify that all the functions of the portal work correctly when valid inputs are provided.
+
+## 3. REQUIREMENT ANALYSIS
+
+### Functional Requirements
+
+1. User Login: Students should be able to log in using valid credentials.
+2. Student Profile: Students should be able to view their personal details.
+3. Attendance: Students should be able to check their attendance details.
+4. Academic Results: Students should be able to view examination results.
+5. Course Details: Students should be able to view registered courses.
+6. Fee Details: Students should be able to view fee payment information.
+7. Logout: Users should be able to securely log out of the portal.
+
+### Non-Functional Requirements
+
+1. The portal should be user-friendly.
+2. The application should respond quickly.
+3. User information should be secure.
+4. The portal should be available whenever required.
+5. The application should work properly on different browsers.
+
+## 4. POSITIVE TEST SCENARIOS
+
+Positive testing verifies whether the application works correctly with valid inputs.
+
+| Scenario ID | Test Scenario |
+|---|---|
+| TS01 | Verify login using valid username and password. |
+| TS02 | Verify that the student dashboard opens successfully. |
+| TS03 | Verify that the student profile displays correctly. |
+| TS04 | Verify that attendance details are displayed. |
+| TS05 | Verify that academic results are displayed. |
+| TS06 | Verify that registered course details are displayed. |
+| TS07 | Verify that fee payment details are displayed. |
+| TS08 | Verify that the user can log out successfully. |
+
+## 5. POSITIVE TEST CASES
+
+| Test Case ID | Test Steps | Test Data | Expected Result |
+|---|---|---|---|
+| TC01 | Open the portal and enter valid login details. Click Login. | Valid username and password | Login should be successful. |
+| TC02 | Log in and open the dashboard. | Valid student account | Dashboard should be displayed. |
+| TC03 | Open the student profile section. | Valid student account | Student details should be displayed correctly. |
+| TC04 | Open the attendance section. | Valid student account | Attendance details should be displayed. |
+| TC05 | Open the examination results section. | Valid student account | Academic results should be displayed. |
+| TC06 | Open the course details section. | Registered student account | Registered courses should be displayed. |
+| TC07 | Open the fee details section. | Valid student account | Fee details and payment status should be displayed. |
+| TC08 | Click the Logout button. | Logged-in student account | User should be logged out successfully. |
+
+## 6. SAMPLE TEST INPUTS
+
+- Username: Valid student username
+- Password: Valid student password
+- Student ID: Valid registered student ID
+- Course: Registered course
+- Attendance: Available attendance record
+- Fee Status: Paid
+
+## 7. EXPECTED OUTPUT
+
+1. The user should log in successfully.
+2. The dashboard should open without errors.
+3. The student profile should display correct information.
+4. Attendance details should be displayed.
+5. Examination results should be displayed.
+6. Course details should be displayed.
+7. Fee payment information should be displayed.
+8. Logout should work successfully.
+
+## 8. RESULT
+
+Thus, the requirements of the ARMS Portal were identified and analyzed successfully. Positive test scenarios and test cases were prepared to verify the proper functioning of the application using valid inputs.
