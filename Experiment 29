@@ -1,0 +1,84 @@
+Experiment 29: Convert Celsius to Fahrenheit Using JUnit Assertions
+
+# AIM
+To write a Java program to convert temperature from Celsius to Fahrenheit and validate the output using JUnit assertions.
+
+# ALGORITHM
+1. Start the program.
+2. Declare a variable to store the temperature in Celsius.
+3. Read the Celsius temperature.
+4. Call a function to convert Celsius into Fahrenheit.
+5. Multiply the Celsius value by 9/5.
+6. Add 32 to the result.
+7. Return the Fahrenheit temperature.
+8. Validate the output using JUnit assertions.
+9. Stop the program.
+
+# CODE
+
+**File 1: TemperatureConverter.java**
+
+```java
+public class TemperatureConverter {
+
+    public static double convertToFahrenheit(double celsius) {
+        return (celsius * 9.0 / 5.0) + 32;
+    }
+
+    public static void main(String[] args) {
+
+        double celsius = 25;
+
+        double fahrenheit = convertToFahrenheit(celsius);
+
+        System.out.println("Temperature in Celsius: " + celsius);
+        System.out.println("Temperature in Fahrenheit: " + fahrenheit);
+    }
+}
+```
+
+**File 2: TemperatureConverterTest.java**
+
+```java
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class TemperatureConverterTest {
+
+    @Test
+    public void testNormalTemperature() {
+        assertEquals(77.0, TemperatureConverter.convertToFahrenheit(25), 0.001);
+    }
+
+    @Test
+    public void testFreezingPoint() {
+        assertEquals(32.0, TemperatureConverter.convertToFahrenheit(0), 0.001);
+    }
+
+    @Test
+    public void testBoilingPoint() {
+        assertEquals(212.0, TemperatureConverter.convertToFahrenheit(100), 0.001);
+    }
+
+    @Test
+    public void testNegativeTemperature() {
+        assertEquals(-40.0, TemperatureConverter.convertToFahrenheit(-40), 0.001);
+    }
+}
+```
+
+# INPUT
+
+```text
+Temperature in Celsius: 25
+```
+
+# OUTPUT
+
+```text
+Temperature in Celsius: 25.0
+Temperature in Fahrenheit: 77.0
+```
+
+# RESULT
+Thus, the Java program to convert temperature from Celsius to Fahrenheit was developed, and the output can be validated using JUnit assertions.
