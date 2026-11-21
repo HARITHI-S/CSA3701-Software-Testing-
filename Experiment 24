@@ -1,0 +1,94 @@
+Experiment 24: Compare Two Strings Without Case Sensitivity Using JUnit Assertions
+
+# AIM
+To write a Java program to check whether two strings are equal ignoring case sensitivity and validate the output using JUnit assertions.
+
+# ALGORITHM
+1. Start the program.
+2. Declare two strings.
+3. Read the two strings.
+4. Use the `equalsIgnoreCase()` method to compare the strings.
+5. If both strings are equal, return true.
+6. Otherwise, return false.
+7. Validate the output using JUnit assertions.
+8. Stop the program.
+
+# CODE
+
+**File 1: StringCompare.java**
+
+```java
+public class StringCompare {
+
+    public static boolean compareStrings(String str1, String str2) {
+        return str1.equalsIgnoreCase(str2);
+    }
+
+    public static void main(String[] args) {
+        String str1 = "Hello";
+        String str2 = "HELLO";
+
+        boolean result = compareStrings(str1, str2);
+
+        if (result) {
+            System.out.println("Both strings are equal");
+        } else {
+            System.out.println("Both strings are not equal");
+        }
+    }
+}
+```
+
+**File 2: StringCompareTest.java**
+
+```java
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class StringCompareTest {
+
+    @Test
+    public void testSameString() {
+        assertTrue(StringCompare.compareStrings("Hello", "Hello"));
+    }
+
+    @Test
+    public void testDifferentCase() {
+        assertTrue(StringCompare.compareStrings("Hello", "HELLO"));
+    }
+
+    @Test
+    public void testDifferentStrings() {
+        assertFalse(StringCompare.compareStrings("Hello", "World"));
+    }
+
+    @Test
+    public void testMixedCase() {
+        assertTrue(StringCompare.compareStrings("Java", "jAvA"));
+    }
+}
+```
+
+# INPUT
+
+```text
+First String: Hello
+Second String: HELLO
+```
+
+# OUTPUT
+
+```text
+Both strings are equal
+```
+
+# EXPECTED JUNIT TEST RESULTS
+
+```text
+Tests run: 4
+Passed: 4
+Failed: 0
+```
+
+# RESULT
+Thus, the Java program to compare two strings without case sensitivity was developed, and the output can be validated using JUnit assertions.
