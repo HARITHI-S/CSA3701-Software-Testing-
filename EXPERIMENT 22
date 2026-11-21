@@ -1,0 +1,107 @@
+EXPERIMENT 22: REVERSE A NUMBER USING JUNIT ASSERTIONS
+
+## 1. AIM
+
+To write a Java program to reverse a given number and validate the output using JUnit assertions.
+
+## 2. ALGORITHM
+
+1. Start the program.
+2. Read an integer number.
+3. Initialize the reverse number as 0.
+4. Get the last digit using the modulus (%) operator.
+5. Multiply the reverse number by 10 and add the last digit.
+6. Remove the last digit from the original number using division (/).
+7. Repeat until the original number becomes zero.
+8. Use JUnit assertions to validate the reversed number.
+9. Display the result and stop the program.
+
+## 3. CODE
+
+### File 1: ReverseNumber.java
+
+```java
+public class ReverseNumber {
+
+    public static int reverse(int number) {
+
+        int reverse = 0;
+
+        while (number != 0) {
+            int digit = number % 10;
+            reverse = reverse * 10 + digit;
+            number = number / 10;
+        }
+
+        return reverse;
+    }
+
+    public static void main(String[] args) {
+
+        int number = 12345;
+
+        System.out.println("Original Number: " + number);
+        System.out.println("Reversed Number: " + reverse(number));
+    }
+}
+```
+
+### File 2: ReverseNumberTest.java
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class ReverseNumberTest {
+
+    @Test
+    public void testReverseNumber() {
+        assertEquals(54321, ReverseNumber.reverse(12345));
+    }
+
+    @Test
+    public void testSingleDigit() {
+        assertEquals(5, ReverseNumber.reverse(5));
+    }
+
+    @Test
+    public void testNumberEndingWithZero() {
+        assertEquals(321, ReverseNumber.reverse(1230));
+    }
+
+    @Test
+    public void testNegativeNumber() {
+        assertEquals(-543, ReverseNumber.reverse(-345));
+    }
+
+    @Test
+    public void testZero() {
+        assertEquals(0, ReverseNumber.reverse(0));
+    }
+}
+```
+
+## 4. INPUT
+
+```text
+Number = 12345
+```
+
+## 5. OUTPUT
+
+```text
+Original Number: 12345
+Reversed Number: 54321
+```
+
+### Expected JUnit Test Results
+
+```text
+Tests Run: 5
+Tests Successful: 5
+Tests Failed: 0
+```
+
+## 6. RESULT
+
+Thus, the Java program to reverse a given number was developed successfully. The output was validated using JUnit assertions for positive numbers, negative numbers, single-digit numbers, and zero.
