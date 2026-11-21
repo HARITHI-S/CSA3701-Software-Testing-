@@ -1,0 +1,91 @@
+Experiment 30: Find the Length of a String Without Using the Built-in length() Function
+
+# AIM
+To write a Java program to find the length of a string without using the built-in `length()` function and validate the output using JUnit assertions.
+
+# ALGORITHM
+1. Start the program.
+2. Declare and initialize a string.
+3. Initialize a counter variable to zero.
+4. Convert the string into a character array using `toCharArray()`.
+5. Traverse each character in the array.
+6. Increment the counter for every character.
+7. Return the counter value.
+8. Validate the output using JUnit assertions.
+9. Stop the program.
+
+# CODE
+
+**File 1: StringLength.java**
+
+```java
+public class StringLength {
+
+    public static int findLength(String str) {
+
+        int count = 0;
+
+        for (char ch : str.toCharArray()) {
+            count++;
+        }
+
+        return count;
+    }
+
+    public static void main(String[] args) {
+
+        String str = "Hello World";
+
+        int result = findLength(str);
+
+        System.out.println("String: " + str);
+        System.out.println("Length of string: " + result);
+    }
+}
+```
+
+**File 2: StringLengthTest.java**
+
+```java
+import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+
+public class StringLengthTest {
+
+    @Test
+    public void testNormalString() {
+        assertEquals(5, StringLength.findLength("Hello"));
+    }
+
+    @Test
+    public void testStringWithSpaces() {
+        assertEquals(11, StringLength.findLength("Hello World"));
+    }
+
+    @Test
+    public void testEmptyString() {
+        assertEquals(0, StringLength.findLength(""));
+    }
+
+    @Test
+    public void testSingleCharacter() {
+        assertEquals(1, StringLength.findLength("A"));
+    }
+}
+```
+
+# INPUT
+
+```text
+String: Hello World
+```
+
+# OUTPUT
+
+```text
+String: Hello World
+Length of string: 11
+```
+
+# RESULT
+Thus, the Java program to find the length of a string without using the built-in `length()` function was developed, and the output can be validated using JUnit assertions.
