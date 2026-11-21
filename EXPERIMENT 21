@@ -1,0 +1,111 @@
+EXPERIMENT 21: PRIME NUMBER CHECKING USING JUNIT ASSERTIONS
+
+## 1. AIM
+
+To write a Java program to check whether a given number is prime or not and validate the output using JUnit assertions.
+
+## 2. ALGORITHM
+
+1. Start the program.
+2. Read an integer number.
+3. Check whether the number is less than or equal to 1.
+4. If yes, the number is not prime.
+5. Otherwise, check whether the number is divisible by any integer from 2 up to its square root.
+6. If divisible, the number is not prime.
+7. Otherwise, the number is prime.
+8. Use JUnit assertions to validate the result.
+9. Display the output and stop the program.
+
+## 3. CODE
+
+### File 1: PrimeNumber.java
+
+```java
+public class PrimeNumber {
+
+    public static boolean isPrime(int number) {
+
+        if (number <= 1) {
+            return false;
+        }
+
+        for (int i = 2; i <= number / i; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+
+        int number = 7;
+
+        if (isPrime(number)) {
+            System.out.println(number + " is a Prime Number");
+        } else {
+            System.out.println(number + " is not a Prime Number");
+        }
+    }
+}
+```
+
+### File 2: PrimeNumberTest.java
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class PrimeNumberTest {
+
+    @Test
+    public void testPrimeNumber() {
+        assertTrue(PrimeNumber.isPrime(7));
+    }
+
+    @Test
+    public void testNonPrimeNumber() {
+        assertFalse(PrimeNumber.isPrime(10));
+    }
+
+    @Test
+    public void testNumberOne() {
+        assertFalse(PrimeNumber.isPrime(1));
+    }
+
+    @Test
+    public void testNegativeNumber() {
+        assertFalse(PrimeNumber.isPrime(-5));
+    }
+
+    @Test
+    public void testNumberTwo() {
+        assertTrue(PrimeNumber.isPrime(2));
+    }
+}
+```
+
+## 4. INPUT
+
+```text
+Number = 7
+```
+
+## 5. OUTPUT
+
+```text
+7 is a Prime Number
+```
+
+### Expected JUnit Test Results
+
+```text
+Tests Run: 5
+Tests Successful: 5
+Tests Failed: 0
+```
+
+## 6. RESULT
+
+Thus, the Java program to check whether a given number is prime or not was developed successfully. The output was validated using JUnit assertions for prime numbers, non-prime numbers, 1, negative numbers, and 2.
