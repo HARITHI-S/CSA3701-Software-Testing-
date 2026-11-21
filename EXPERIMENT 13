@@ -1,0 +1,103 @@
+EXPERIMENT 13: GREATEST COMMON DIVISOR (GCD) USING JUNIT ASSERTIONS: GREATEST COMMON DIVISOR (GCD) USING JUNIT ASSERTIONS
+
+## 1. AIM
+
+To write a Java program to calculate the Greatest Common Divisor (GCD) of two numbers and validate the output using JUnit assertions.
+
+## 2. ALGORITHM
+
+1. Start the program.
+2. Read two integer numbers.
+3. Check whether both numbers are valid.
+4. Find the remainder by dividing the first number by the second number.
+5. Repeat the process until the remainder becomes zero.
+6. The last non-zero divisor is the GCD.
+7. Use JUnit assertions to validate the calculated result.
+8. Display the output and stop the program.
+
+## 3. CODE
+
+### File 1: GCD.java
+
+```java
+public class GCD {
+
+    public static int findGCD(int a, int b) {
+
+        a = Math.abs(a);
+        b = Math.abs(b);
+
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        return a;
+    }
+
+    public static void main(String[] args) {
+
+        int a = 24;
+        int b = 36;
+
+        System.out.println("GCD of " + a + " and " + b
+                + " is: " + findGCD(a, b));
+    }
+}
+```
+
+### File 2: GCDTest.java
+
+```java
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+public class GCDTest {
+
+    @Test
+    public void testGCD() {
+        assertEquals(12, GCD.findGCD(24, 36));
+    }
+
+    @Test
+    public void testEqualNumbers() {
+        assertEquals(10, GCD.findGCD(10, 10));
+    }
+
+    @Test
+    public void testOneNumberIsZero() {
+        assertEquals(15, GCD.findGCD(15, 0));
+    }
+
+    @Test
+    public void testNegativeNumbers() {
+        assertEquals(6, GCD.findGCD(-18, 24));
+    }
+}
+```
+
+## 4. INPUT
+
+```text
+First Number = 24
+Second Number = 36
+```
+
+## 5. OUTPUT
+
+```text
+GCD of 24 and 36 is: 12
+```
+
+### Expected JUnit Test Results
+
+```text
+Tests Run: 4
+Tests Successful: 4
+Tests Failed: 0
+```
+
+## 6. RESULT
+
+Thus, the Java program to calculate the Greatest Common Divisor (GCD) of two numbers was developed successfully. The output was validated using JUnit assertions.
